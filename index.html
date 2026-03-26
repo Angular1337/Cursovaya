@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Catalyst Network | Подписка на русские сервера</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="animated-bg"></div>
+<canvas id="particleCanvas"></canvas>
+
+<header class="navbar">
+    <div class="container">
+        <div class="logo" id="logoBtn"><i class="fas fa-bolt"></i> Catalyst Network</div>
+        <ul class="nav-links">
+            <li data-page="servers" class="active-page"><i class="fas fa-server"></i> Серверы</li>
+            <li data-page="about"><i class="fas fa-info-circle"></i> О нас</li>
+            <li data-page="subscription"><i class="fas fa-crown"></i> Подписка</li>
+            <li data-page="contact"><i class="fas fa-envelope"></i> Контакты</li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div id="servers-page" class="page active-page-content">
+            <div style="text-align: center; margin-bottom: 1.8rem;">
+                <h1 style="font-size: 2.2rem; font-weight: 800;">Подписка на стабильные русские сервера</h1>
+                <p style="color: #b9c3e6; max-width: 700px; margin: 0.8rem auto 0;">В условиях блокировок иностранных серверов мы предлагаем надёжную альтернативу. Одна подписка — доступ ко всем нашим серверам в России.</p>
+            </div>
+            <div class="servers-grid">
+                <div class="server-card">
+                    <div class="icon-badge"><i class="fas fa-headset" style="color: #6c5ce7;"></i></div>
+                    <h3>TeamSpeak 3</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> ts3.catalystnetwork.online</div>
+                    <p>Голосовой сервер, не зависящий от санкций. Стабильная связь, приватные комнаты, DDoS-защита. Полноценная замена зарубежных узлов.</p>
+                    <div class="online-status"><div class="pulse-dot"></div><span class="online-text" id="ts3-online-text">Загрузка...</span></div>
+                </div>
+                <div class="server-card">
+                    <div class="icon-badge"><i class="fas fa-cube" style="color: #a855f7;"></i></div>
+                    <h3>Minecraft Server</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> mc.catalystnetwork.online</div>
+                    <p><strong>Ванильный сервер в РФ</strong>. Без задержек, с полной защитой. Идеально для тех, кто устал от лагов на зарубежных хостах.</p>
+                    <div class="online-status"><div class="pulse-dot"></div><span class="online-text" id="mc-online-text">Загрузка...</span></div>
+                </div>
+                <div class="server-card in-development">
+                    <div class="dev-badge"><i class="fas fa-code-branch"></i> В разработке</div>
+                    <div class="icon-badge"><i class="fas fa-dragon" style="color: #ffa500;"></i></div>
+                    <h3>Rust</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> rust.catalystnetwork.online</div>
+                    <p>Российский Rust-сервер с низким пингом, без блокировок. Рейды, кланы, экономика — всё локально.</p>
+                    <div class="online-status"><div class="pulse-dot" style="background-color: #ffa500; box-shadow: 0 0 0 0 rgba(255,165,0,0.7);"></div><span class="online-text">Скоро — Q2 2026</span></div>
+                </div>
+                <div class="server-card in-development">
+                    <div class="dev-badge"><i class="fas fa-code-branch"></i> В разработке</div>
+                    <div class="icon-badge"><i class="fas fa-fist-raised" style="color: #ffa500;"></i></div>
+                    <h3>CS2</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> cs2.catalystnetwork.online</div>
+                    <p>Российский сервер CS2 с рейтингом, кастомными режимами и защитой от читов. Играйте без VPN.</p>
+                    <div class="online-status"><div class="pulse-dot" style="background-color: #ffa500; box-shadow: 0 0 0 0 rgba(255,165,0,0.7);"></div><span class="online-text">Скоро — Q2 2026</span></div>
+                </div>
+                <div class="server-card in-development">
+                    <div class="dev-badge"><i class="fas fa-code-branch"></i> В разработке</div>
+                    <div class="icon-badge"><i class="fas fa-robot" style="color: #ffa500;"></i></div>
+                    <h3>Discord Bot</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> bot.catalystnetwork.ru</div>
+                    <p>Музыкальный бот для голосовых каналов, работающий без ограничений на территории РФ.</p>
+                    <div class="online-status"><div class="pulse-dot" style="background-color: #ffa500; box-shadow: 0 0 0 0 rgba(255,165,0,0.7);"></div><span class="online-text">Скоро — Q1 2026</span></div>
+                </div>
+                <div class="server-card in-development">
+                    <div class="dev-badge"><i class="fas fa-code-branch"></i> В разработке</div>
+                    <div class="icon-badge"><i class="fas fa-gamepad" style="color: #ffa500;"></i></div>
+                    <h3>FiveM (GTA V RP)</h3>
+                    <div class="server-ip"><i class="fas fa-globe"></i> fivem.catalystnetwork.online</div>
+                    <p>Ролевой проект на российской инфраструктуре. Стабильность и никаких блокировок.</p>
+                    <div class="online-status"><div class="pulse-dot" style="background-color: #ffa500; box-shadow: 0 0 0 0 rgba(255,165,0,0.7);"></div><span class="online-text">Скоро — Q3 2026</span></div>
+                </div>
+                <div class="suggest-card" id="openSuggestModal">
+                    <div class="plus-icon"><i class="fas fa-plus fa-2x"></i></div>
+                    <h3 style="font-size: 1.4rem;">Предложить новый сервер</h3>
+                    <p style="font-size: 0.85rem;">Какую игру или сервис добавить? Мы открыты к идеям!</p>
+                    <span class="btn-outline btn" style="pointer-events: none;"><i class="fas fa-lightbulb"></i> Предложить</span>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2 style="text-align: center;">Почему Catalyst Network?</h2>
+                <div class="stats-grid">
+                    <div class="stat-card"><i class="fas fa-map-marked-alt"></i><h3>Локальные серверы</h3><p>Все серверы находятся в РФ, никаких задержек и блокировок.</p></div>
+                    <div class="stat-card"><i class="fas fa-shield-alt"></i><h3>DDoS-защита</h3><p>Защита от любых атак, стабильность 24/7.</p></div>
+                    <div class="stat-card"><i class="fas fa-ruble-sign"></i><h3>Единая подписка</h3><p>Один платёж — доступ ко всем серверам.</p></div>
+                    <div class="stat-card"><i class="fas fa-headset"></i><h3>Русскоязычная поддержка</h3><p>Оперативная помощь в Telegram.</p></div>
+                </div>
+            </div>
+
+            <div class="info-section"><h2 style="text-align: center;"><i class="fas fa-question"></i> Часто задаваемые вопросы</h2><div class="faq-grid"><div class="faq-item"><h4>Какая стоимость подписки?</h4><p>Всего 289₽/мес. Доступ ко всем текущим и будущим серверам. Первый месяц бесплатно.</p></div><div class="faq-item"><h4>Как подключиться?</h4><p>После оформления подписки вы получите доступ к панели управления с IP и инструкциями.</p></div><div class="faq-item"><h4>Что делать, если иностранный сервер заблокировали?</h4><p>Мы предоставляем полностью российскую инфраструктуру, не подпадающую под санкции.</p></div><div class="faq-item"><h4>Можно ли попробовать бесплатно?</h4><p>Да, первый месяц абсолютно бесплатный для всех новых пользователей.</p></div></div></div>
+        </div>
+
+        <div id="about-page" class="page">
+            <div class="info-section"><h2><i class="fas fa-bolt"></i> Наша миссия</h2><p>Создать надёжную российскую альтернативу для игровых и голосовых серверов, которые блокируются зарубежными хостингами. Мы — физическое лицо, предоставляющее услуги на основе самозанятости, и работаем полностью легально в РФ.</p></div>
+            <div class="info-section"><h2><i class="fas fa-hand-holding-usd"></i> Правовая информация</h2><p><strong>Владелец:</strong> Работин Анатолий Владиславович (самозанятый)<br><strong>ИНН:</strong> 123456789012<br><strong>Услуги:</strong> предоставление доступа к игровым серверам на территории РФ. Все налоги уплачиваются в соответствии с законодательством.</p></div>
+            <div class="info-section"><h2><i class="fas fa-history"></i> История</h2><p>Проект запущен в 2023 году как ответ на блокировку иностранных серверов. Мы объединили TeamSpeak и Minecraft на своей инфраструктуре, а теперь расширяемся на другие игры.</p></div>
+            <div class="info-section"><h2><i class="fas fa-chart-line"></i> Планы</h2><p>В 2026 году планируем запустить Rust, CS2, FiveM и собственного музыкального бота. Следите за обновлениями!</p></div>
+        </div>
+
+        <div id="subscription-page" class="page">
+            <div class="info-section" style="text-align: center;">
+                <i class="fas fa-crown" style="font-size: 2.5rem; color: #c084fc;"></i>
+                <h2 style="margin: 0.5rem 0;">Catalyst Premium</h2>
+                <div class="price">289 ₽ / месяц</div>
+                <p style="margin: 0.5rem 0;">Первый месяц бесплатно! Оплата картами РФ, ЮMoney, криптовалюта.</p>
+                <button class="btn" id="subscribeBtn">Оформить подписку</button>
+                <div style="margin-top: 1rem;"><small>После оформления вы получите доступ к личному кабинету и реквизиты серверов.</small></div>
+                <hr style="margin: 1.5rem 0;">
+                <h3>Что входит в подписку?</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                    <div><i class="fas fa-check"></i> TeamSpeak 3</div>
+                    <div><i class="fas fa-check"></i> Minecraft (ванильный)</div>
+                    <div><i class="fas fa-check"></i> Rust (в разработке)</div>
+                    <div><i class="fas fa-check"></i> CS2 (в разработке)</div>
+                    <div><i class="fas fa-check"></i> FiveM (в разработке)</div>
+                    <div><i class="fas fa-check"></i> Discord бот (в разработке)</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-page" class="page">
+            <div class="info-section" style="text-align: center;">
+                <i class="fas fa-paper-plane" style="font-size: 2.5rem;"></i>
+                <h2>Свяжитесь с нами</h2>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+                    <button class="btn contact-btn" data-contact="telegram"><i class="fab fa-telegram"></i> Telegram</button>
+                    <button class="btn contact-btn" data-contact="discord"><i class="fab fa-discord"></i> Discord</button>
+                    <button class="btn contact-btn" data-contact="email"><i class="fas fa-envelope"></i> Email</button>
+                </div>
+                <p>Отвечаем в течение 15 минут в рабочее время (10:00–23:00 МСК).</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Catalyst Network</h3>
+                <p>Российская альтернатива заблокированным серверам. Одна подписка — все возможности.</p>
+                <div class="social-icons">
+                    <a class="social-link" data-social="telegram"><i class="fab fa-telegram"></i></a>
+                    <a class="social-link" data-social="discord"><i class="fab fa-discord"></i></a>
+                    <a class="social-link" data-social="vk"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="#" data-page-link="servers">Серверы</a></li>
+                    <li><a href="#" data-page-link="about">О нас</a></li>
+                    <li><a href="#" data-page-link="subscription">Подписка</a></li>
+                    <li><a href="#" data-page-link="contact">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Юридическая информация</h3>
+                <ul>
+                    <li><a class="legal-link" data-doc="privacy">Политика конфиденциальности</a></li>
+                    <li><a class="legal-link" data-doc="terms">Пользовательское соглашение</a></li>
+                    <li><a class="legal-link" data-doc="rules">Правила серверов</a></li>
+                    <li><a class="legal-link" data-doc="legal">Сведения о владельце</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><i class="fab fa-telegram"></i> @catalyst_network</li>
+                    <li><i class="fas fa-envelope"></i> support@catalystnetwork.ru</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, РФ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Catalyst Network — Сервис подписки на русские игровые сервера. Все налоги уплачены. <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+</footer>
+
+<div id="suggestModal" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; z-index:1001; visibility:hidden; opacity:0; transition:0.2s;">
+    <div style="background:#0f1119; border-radius:1.5rem; max-width:480px; width:90%; padding:1.5rem; border:1px solid #6c5ce7;">
+        <h3><i class="fas fa-plus-circle"></i> Предложить новый сервер</h3>
+        <p>Ваше предложение будет передано администраторам.</p>
+        <label>Название (игра / софт)</label>
+        <input type="text" id="suggestName" placeholder="Пример: Rust, CS2, Discord Bot..." style="width:100%; background:#1a1e2a; border:1px solid #2d3348; border-radius:1rem; padding:10px; margin:0.5rem 0 1rem;">
+        <label>Почему это важно?</label>
+        <textarea id="suggestReason" rows="2" placeholder="Расскажите, почему этот сервер нужен..." style="width:100%; background:#1a1e2a; border:1px solid #2d3348; border-radius:1rem; padding:10px; margin:0.5rem 0 1rem;"></textarea>
+        <div style="display:flex; justify-content:flex-end; gap:1rem;">
+            <button class="btn-outline btn" id="closeModalBtn">Отмена</button>
+            <button class="btn" id="submitSuggestionBtn">Отправить</button>
+        </div>
+        <p id="suggestFeedback" style="color:#a855f7; font-size:0.8rem; margin-top:0.5rem;"></p>
+    </div>
+</div>
+
+<div id="legalModal" class="info-modal">
+    <div class="info-modal-content">
+        <div id="legalModalContent"></div>
+        <div class="close-modal"><button class="btn close-legal-modal">Закрыть</button></div>
+    </div>
+</div>
+</body>
+</html>
